@@ -20,7 +20,6 @@ class _StateWidgetState extends State<StateWidget> {
   String mode='';
 
   void incrementCounter(String mode, String value) {
-    // setState(() => counter = counter +value);
     print(mode);
     setState(() {
       if (value != '<') {
@@ -34,7 +33,7 @@ class _StateWidgetState extends State<StateWidget> {
       } else {
         text = text.substring(0, i-1);
         (i > 0) ? i -= 1 : i = 0;
-      };
+      }
       if (i == 4 && complit == false && mode == 'setup') {
         complit = true;
         pin = text;

@@ -1,3 +1,4 @@
+import 'package:auth_app/widgets/app_settings/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class MenuScreenWidget extends StatelessWidget {
@@ -19,56 +20,56 @@ class MenuScreenWidget extends StatelessWidget {
               ),
             ),
           ),
+          backgroundColor: AppColors.colorWhite,
           body:Column(
             children: [
               const SizedBox(height: 60,),
               Center(
                 child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Color.fromRGBO(245, 245, 248, 1)), /*Color.fromRGBO(245, 245, 248, 1)*/
-                    foregroundColor: MaterialStateProperty.all(Color.fromRGBO(150, 165, 190, 1)), /*Color.fromRGBO(123, 141, 171, 1)*/
+                    backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(245, 245, 248, 1)), /*Color.fromRGBO(245, 245, 248, 1)*/
+                    foregroundColor: MaterialStateProperty.all(const Color.fromRGBO(150, 165, 190, 1)), /*Color.fromRGBO(123, 141, 171, 1)*/
                     textStyle: MaterialStateProperty.all(
-                      TextStyle(
+                      const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w400,
                         // color: Colors.black,
                       ),
                     ),
                     padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(horizontal: 15, vertical: 10)
+                        const EdgeInsets.symmetric(horizontal: 15, vertical: 10)
                     ),
                   ),
                   onPressed:() {
                     Navigator.pushNamed(context, '/setup_pin');
                   },
-                  child: Text('Setup PIN'),
+                  child: const Text('Setup PIN'),
                 ),
               ),
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Center(
                 child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Color.fromRGBO(245, 245, 248, 1)),
-                    foregroundColor: MaterialStateProperty.all(Color.fromRGBO(150, 165, 190, 1)),
+                    backgroundColor: MaterialStateProperty.all(const Color.fromRGBO(245, 245, 248, 1)),
+                    foregroundColor: MaterialStateProperty.all(const Color.fromRGBO(150, 165, 190, 1)),
                     textStyle: MaterialStateProperty.all(
-                      TextStyle(
+                      const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w400,
                         // color: Colors.black,
                       ),
                     ),
                     padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(horizontal: 15, vertical: 10)
+                        const EdgeInsets.symmetric(horizontal: 15, vertical: 10)
                     ),
                   ),
                   onPressed:(){
                     Navigator.pushNamed(context, '/authentication');
                   },
-                  child: Text('Login'),
+                  child: const Text('Login'),
                 ),
               ),
             ],
-
           ),
       ),
     );
